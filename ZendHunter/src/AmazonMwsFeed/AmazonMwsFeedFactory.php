@@ -7,6 +7,8 @@
 
 namespace ZendHunter\AmazonMwsFeed;
 
+use Interop\Container\ContainerInterface;
+
 class AmazonMwsFeedFactory
 {
     public function __construct()
@@ -26,9 +28,9 @@ class AmazonMwsFeedFactory
         });
     }
 
-    public function __invoke()
+    public function __invoke(ContainerInterface $container)
     {
-        $config = require __DIR__ . '/../../config/module.config.php';
+        $config = $container->get('config');
 
         if (!defined('DATE_FORMAT')) {
             define ('DATE_FORMAT', $config['mws-config']['DATE_FORMAT']);
