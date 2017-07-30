@@ -14,12 +14,18 @@
     }
   ],
   "require": {
-    "php": ">=5.6.0"
+    "php": ">=5.6.0",
+    "monolog/monolog": "*"
+  },
+  "require-dev" : {
+    "phpunit/phpunit":"*"
   },
   "autoload": {
-    "psr-0": {
-      "zend-amazon-mws": "src",
-      "amazon-sdk" : "library/AmazonSdk/src"
+    "classmap": [
+      "library/AmazonMwsSdk/src"
+    ],
+    "psr-4": {
+      "ZendHunter\\": "ZendHunter/src"
     }
   }
 }
