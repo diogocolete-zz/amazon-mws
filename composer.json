@@ -1,7 +1,5 @@
 {
   "name": "diogocolete/amazon-mws",
-  "version": "0.1",
-  "type": "library",
   "description": "Operações com amazon mws",
   "keywords": ["amazon","amazon mws"],
   "homepage": "https://github.com/diogocolete/amazon-mws",
@@ -27,6 +25,11 @@
     ],
     "psr-4": {
       "ZendHunter\\": "ZendHunter/src"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.1-dev"
     }
   }
 }
