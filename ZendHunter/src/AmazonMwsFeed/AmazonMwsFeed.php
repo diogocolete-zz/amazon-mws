@@ -56,7 +56,7 @@ class AmazonMwsFeed
     {
         $request = new \MarketplaceWebService_Model_SubmitFeedRequest();
         $request->setMerchant($this->config['MERCHANT_ID']);
-        $request->setMWSAuthToken('<MWS Auth Token>'); // Optional
+        $request->setMWSAuthToken($this->config['MWS_AUTH_TOKEN']); // Optional
         return $request;
     }
 
